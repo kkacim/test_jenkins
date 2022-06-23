@@ -19,7 +19,11 @@ pipeline {
         stage('exercice1') {
             steps {
                 echo "The number of times devops is found: "
-                grep -o -i 'devops' example.txt | wc -l
+                sh """#!/bin/bash -xe
+                    cd ${WORKSPACE}
+                    grep -o -i devops example.txt | wc -l
+                """
+                
             }
         }
         stage('exercice2') {
