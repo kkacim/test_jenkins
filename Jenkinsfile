@@ -19,14 +19,14 @@ pipeline {
         stage('exercise1') {
             steps {
                 echo "The number of times devops is found: "
-                sh 'exercise1.sh'
+                sh './exercise1.sh'
                 
             }
         }
         stage('exercise2') {
             steps {
                 echo "After replacing devops by hello_world: "
-                sh 'exercise2.sh'
+                sh './exercise2.sh'
             }
         }
     }
