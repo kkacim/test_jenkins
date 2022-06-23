@@ -19,7 +19,7 @@ pipeline {
         stage('exercise1') {
             steps {
                 echo "The number of times devops is found: "
-                sh "chmod +x -R ${env.WORKSPACE}"
+                sh "chmod +x exercise1.sh"
                 sh './exercise1.sh'
                 
             }
@@ -27,6 +27,7 @@ pipeline {
         stage('exercise2') {
             steps {
                 echo "After replacing devops by hello_world: "
+                sh "chmod +x exercise2.sh"
                 sh './exercise2.sh'
             }
         }
