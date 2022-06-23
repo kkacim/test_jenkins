@@ -19,6 +19,7 @@ pipeline {
         stage('exercise1') {
             steps {
                 echo "The number of times devops is found: "
+                sh "chmod +x -R ${env.WORKSPACE}"
                 sh './exercise1.sh'
                 
             }
