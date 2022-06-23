@@ -28,9 +28,12 @@ pipeline {
         }
         stage('exercice2') {
             steps {
-                sed 's/devops/hello_world/g' example.txt > example2.txt
                 echo "After replacing devops by hello_world: "
-                cat example2.txt
+                sh """#!/bin/bash -xe
+                    cd ${WORKSPACE}
+                    sed 's/devops/hello_world/g' example.txt > example2.txt
+                    cat example2.txt
+                """   
             }
         }
     }
