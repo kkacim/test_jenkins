@@ -16,17 +16,17 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        stage('exercice1') {
+        stage('exercise1') {
             steps {
                 echo "The number of times devops is found: "
-                sh '/exercice1.sh'
+                sh 'exercise1.sh'
                 
             }
         }
-        stage('exercice2') {
+        stage('exercise2') {
             steps {
                 echo "After replacing devops by hello_world: "
-                sh '/exercice2.sh'
+                sh 'exercise2.sh'
             }
         }
     }
